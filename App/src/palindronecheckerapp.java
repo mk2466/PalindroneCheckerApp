@@ -1,28 +1,23 @@
-import java.util.Scanner;
-
-public class PalindromeChecker {
+public class PalindromeUC2 {
 
     public static void main(String[] args) {
 
-        System.out.println("Welcome to Palindrome Checker");
-        System.out.println("Welcome to Palindrome Checker");
-        System.out.println("Welcome to Palindrome Checker");
+        System.out.println("=== UC2: Hardcoded Palindrome Check ===");
 
-        Scanner scanner = new Scanner(System.in);
+        String word = "madam";
 
-        System.out.print("Enter a string: ");
-        String input = scanner.nextLine();
+        String reversed = "";
 
-        String processedInput = input.replaceAll("\\s+", "").toLowerCase();
-
-        String reversed = new StringBuilder(processedInput).reverse().toString();
-
-        if (processedInput.equals(reversed)) {
-            System.out.println("Result: It is a Palindrome ✅");
-        } else {
-            System.out.println("Result: It is NOT a Palindrome ❌");
+        for (int i = word.length() - 1; i >= 0; i--) {
+            reversed = reversed + word.charAt(i);
         }
 
-        scanner.close();
+        if (word.equals(reversed)) {
+            System.out.println("The word \"" + word + "\" is a Palindrome.");
+        } else {
+            System.out.println("The word \"" + word + "\" is NOT a Palindrome.");
+        }
+
+        System.out.println("Program Ended.");
     }
 }
