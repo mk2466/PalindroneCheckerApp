@@ -1,6 +1,6 @@
 # Palindrome Checker App
 
-## 📌 Project Overview
+##  Project Overview
 Palindrome Checker App is a console-based Java application that checks whether a given string is a palindrome.
 
 A palindrome is a word, phrase, or sequence that reads the same forward and backward.
@@ -10,30 +10,22 @@ Examples:
 - level → Palindrome
 - hello → Not a Palindrome
 
----
-
-## 🎯 Objective
+##  Objective
 - To understand basic Java programming concepts.
 - To practice string manipulation.
 - To strengthen core programming fundamentals.
 
----
-
-## 🛠 Technologies Used
+## Technologies Used
 - Java
 - Console-based application
 
----
-
-## 🚀 Features
+##  Features
 - Displays welcome message
 - Takes user input
 - Checks whether the input string is a palindrome
 - Displays result on console
 
----
-
-## ▶ How to Run
+## How to Run
 
 1. Compile the program:
    javac PalindromeChecker.java
@@ -41,9 +33,7 @@ Examples:
 2. Run the program:
    java PalindromeChecker
 
----
-
-## 📚 Concepts Used
+## Concepts Used
 - Class
 - Main Method
 - String Handling
@@ -52,7 +42,5 @@ Examples:
 - Scanner Class
 - Console Output
 
----
-
-## 👨‍💻 Author
+## Author
 Your Name
