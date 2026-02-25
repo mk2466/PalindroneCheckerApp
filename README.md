@@ -42,5 +42,3 @@ Examples:
 - Scanner Class
 - Console Output
 
-## Author
-Your Name
