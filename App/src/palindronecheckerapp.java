@@ -18,9 +18,9 @@ public class PalindromeChecker {
         String reversed = new StringBuilder(processedInput).reverse().toString();
 
         if (processedInput.equals(reversed)) {
-            System.out.println("Result: It is a Palindrome ✅");
+            System.out.println("Result: It is a Palindrome ");
         } else {
-            System.out.println("Result: It is NOT a Palindrome ❌");
+            System.out.println("Result: It is NOT a Palindrome ");
         }
 
         scanner.close();
