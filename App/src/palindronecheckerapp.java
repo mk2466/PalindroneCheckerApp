@@ -1,86 +1,28 @@
 import java.util.Scanner;
 
-class Node {
-    char data;
-    Node next;
+public class PalindromeChecker {
 
-    Node(char data) {
-        this.data = data;
-        this.next = null;
-    }
-}
-
-public class LinkedListPalindromeChecker {
-
-    public static Node createList(String input) {
-        Node head = null;
-        Node tail = null;
-
-        for (char c : input.toCharArray()) {
-            Node newNode = new Node(c);
-            if (head == null) {
-                head = newNode;
-                tail = newNode;
-            } else {
-                tail.next = newNode;
-                tail = newNode;
-            }
-        }
-        return head;
-    }
-
-    public static boolean isPalindrome(Node head) {
-        if (head == null || head.next == null) {
+    public static boolean isPalindrome(String str, int start, int end) {
+        if (start >= end) {
             return true;
         }
-
-        Node slow = head;
-        Node fast = head;
-
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
+        if (str.charAt(start) != str.charAt(end)) {
+            return false;
         }
-
-        Node prev = null;
-        Node current = slow;
-
-        while (current != null) {
-            Node next = current.next;
-            current.next = prev;
-            prev = current;
-            current = next;
-        }
-
-        Node firstHalf = head;
-        Node secondHalf = prev;
-
-        while (secondHalf != null) {
-            if (firstHalf.data != secondHalf.data) {
-                return false;
-            }
-            firstHalf = firstHalf.next;
-            secondHalf = secondHalf.next;
-        }
-
-        return true;
+        return isPalindrome(str, start + 1, end - 1);
     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a string: ");
         String input = scanner.nextLine();
-
-        Node head = createList(input);
-
-        boolean result = isPalindrome(head);
-
+        String processed = input.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        boolean result = isPalindrome(processed, 0, processed.length() - 1);
         if (result) {
-            System.out.println("The string is a palindrome.");
+            System.out.println("Palindrome");
         } else {
-            System.out.println("The string is not a palindrome.");
+            System.out.println("Not a Palindrome");
         }
-
         scanner.close();
     }
 }
