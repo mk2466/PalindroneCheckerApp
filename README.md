@@ -1,36 +1,31 @@
-# Palindrome Checker App - UC12
+# Palindrome Checker App - UC13
 
 ## Description
-UC12 implements the Strategy Pattern to dynamically select different palindrome-checking algorithms at runtime.
+UC13 compares the performance of multiple palindrome-checking algorithms using execution time measurement.
 
 ## Objective
-To demonstrate interface-based design, polymorphism, and dynamic behavior selection using the Strategy Pattern.
+To analyze and compare different palindrome validation approaches based on execution speed.
 
-## Features
-- Runtime strategy selection
-- Stack-based palindrome algorithm
-- Deque-based palindrome algorithm
-- Case-insensitive comparison
-- Ignores non-alphanumeric characters
-- Console-based execution
-
-## Design Structure
-1. PalindromeStrategy interface defines the contract.
-2. StackStrategy implements stack-based validation.
-3. DequeStrategy implements deque-based validation.
-4. PalindromeService uses composition to execute selected strategy.
-5. PalindromeApp handles user interaction.
+## Algorithms Compared
+- Two Pointer Strategy
+- Stack Strategy
+- Deque Strategy
 
 ## Concepts Used
-- Interface
-- Polymorphism
-- Strategy Pattern
-- Dependency Injection
-- Stack and Deque data structures
+- Interface and Polymorphism
+- Algorithm comparison
+- System.nanoTime()
+- Performance measurement
+
+## Flow
+1. User enters a string.
+2. Multiple algorithms are executed sequentially.
+3. Execution time is captured using System.nanoTime().
+4. Results and timing are displayed.
 
 ## How to Run
 1. Compile:
-   javac PalindromeApp.java
+   javac PalindromePerformanceApp.java
 
 2. Run:
-   java PalindromeApp
+   java PalindromePerformanceApp
