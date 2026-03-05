@@ -1,28 +1,41 @@
 import java.util.Scanner;
 
-public class PalindromeChecker {
+class PalindromeChecker {
 
-    public static boolean isPalindrome(String str, int start, int end) {
-        if (start >= end) {
-            return true;
+    public boolean checkPalindrome(String input) {
+        String normalized = input.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        int start = 0;
+        int end = normalized.length() - 1;
+
+        while (start < end) {
+            if (normalized.charAt(start) != normalized.charAt(end)) {
+                return false;
+            }
+            start++;
+            end--;
         }
-        if (str.charAt(start) != str.charAt(end)) {
-            return false;
-        }
-        return isPalindrome(str, start + 1, end - 1);
+
+        return true;
     }
+}
+
+public class PalindromeApp {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        PalindromeChecker checker = new PalindromeChecker();
+
         System.out.print("Enter a string: ");
         String input = scanner.nextLine();
-        String processed = input.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
-        boolean result = isPalindrome(processed, 0, processed.length() - 1);
+
+        boolean result = checker.checkPalindrome(input);
+
         if (result) {
             System.out.println("Palindrome");
         } else {
             System.out.println("Not a Palindrome");
         }
+
         scanner.close();
     }
 }
