@@ -1,15 +1,22 @@
 import java.util.Scanner;
+import java.util.Stack;
 
-public class PalindromeChecker {
+public class StackPalindromeCheck {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a string: ");
         String input = sc.nextLine();
 
+        Stack<Character> stack = new Stack<>();
+
+        for (int i = 0; i < input.length(); i++) {
+            stack.push(input.charAt(i));
+        }
+
         String reversed = "";
 
-        for (int i = input.length() - 1; i >= 0; i--) {
-            reversed = reversed + input.charAt(i);
+        while (!stack.isEmpty()) {
+            reversed = reversed + stack.pop();
         }
 
         if (input.equals(reversed)) {
