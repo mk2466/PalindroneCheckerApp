@@ -1,13 +1,14 @@
 import java.util.Scanner;
 
-public class PalindromeCheckerUC10 {
+class PalindromeChecker {
 
-    public static boolean isPalindrome(String str) {
+    public boolean checkPalindrome(String input) {
+        String normalized = input.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
         int start = 0;
-        int end = str.length() - 1;
+        int end = normalized.length() - 1;
 
         while (start < end) {
-            if (str.charAt(start) != str.charAt(end)) {
+            if (normalized.charAt(start) != normalized.charAt(end)) {
                 return false;
             }
             start++;
@@ -16,15 +17,18 @@ public class PalindromeCheckerUC10 {
 
         return true;
     }
+}
+
+public class PalindromeApp {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        PalindromeChecker checker = new PalindromeChecker();
+
         System.out.print("Enter a string: ");
         String input = scanner.nextLine();
 
-        String normalized = input.replaceAll("\\s+", "").toLowerCase();
-
-        boolean result = isPalindrome(normalized);
+        boolean result = checker.checkPalindrome(input);
 
         if (result) {
             System.out.println("Palindrome");
