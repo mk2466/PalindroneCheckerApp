@@ -1,25 +1,27 @@
 Palindrome Checker App
 
+UC4: Character Array Based Palindrome Check
+
 Description
-This is a console-based Java application that checks whether a given string is a palindrome by reversing the string and comparing it with the original string.
+This Java console application checks whether a given string is a palindrome by converting the string into a character array and comparing characters from the beginning and end.
 
 Goal
-To verify if a string reads the same forward and backward.
+To determine if a string is a palindrome using a character array and two-pointer technique.
 
 Process
 1. Take a string input from the user.
-2. Reverse the string using a loop.
-3. Compare the original string with the reversed string.
-4. Display whether the string is a palindrome or not.
+2. Convert the string to a character array.
+3. Use two pointers to compare characters from the start and end.
+4. If all characters match, the string is a palindrome.
 
 Concepts Used
-- For loop
-- String manipulation
-- String concatenation
-- equals() method for comparison
+Character Array
+Array Indexing
+Two Pointer Technique
+String to char array conversion
 
 Data Structure Used
-String
+char[]
 
 Example
 
