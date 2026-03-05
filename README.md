@@ -1,26 +1,32 @@
-# Palindrome Checker App - UC11
+# Palindrome Checker App - UC12
 
 ## Description
-UC11 implements an object-oriented palindrome service by encapsulating palindrome logic inside a dedicated class.
+UC12 implements the Strategy Pattern to dynamically select different palindrome-checking algorithms at runtime.
 
 ## Objective
-To demonstrate encapsulation and single responsibility principle by separating palindrome logic from application logic.
+To demonstrate interface-based design, polymorphism, and dynamic behavior selection using the Strategy Pattern.
 
 ## Features
-- Encapsulated palindrome logic
+- Runtime strategy selection
+- Stack-based palindrome algorithm
+- Deque-based palindrome algorithm
 - Case-insensitive comparison
 - Ignores non-alphanumeric characters
 - Console-based execution
 
-## OOP Concepts Used
-- Encapsulation
-- Single Responsibility Principle
-- Class and Object design
+## Design Structure
+1. PalindromeStrategy interface defines the contract.
+2. StackStrategy implements stack-based validation.
+3. DequeStrategy implements deque-based validation.
+4. PalindromeService uses composition to execute selected strategy.
+5. PalindromeApp handles user interaction.
 
-## Structure
-1. PalindromeChecker class handles palindrome validation.
-2. PalindromeApp class handles user interaction.
-3. checkPalindrome() method exposes validation service.
+## Concepts Used
+- Interface
+- Polymorphism
+- Strategy Pattern
+- Dependency Injection
+- Stack and Deque data structures
 
 ## How to Run
 1. Compile:
