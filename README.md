@@ -1,25 +1,28 @@
 Palindrome Checker App
 
+UC5: Stack-Based Palindrome Checker
+
 Description
-This is a console-based Java application that checks whether a given string is a palindrome by reversing the string and comparing it with the original string.
+This Java console application checks whether a given string is a palindrome using a stack. The stack stores characters of the string and reverses their order using push and pop operations.
 
 Goal
-To verify if a string reads the same forward and backward.
+To verify whether a string is a palindrome using stack operations.
 
 Process
 1. Take a string input from the user.
-2. Reverse the string using a loop.
-3. Compare the original string with the reversed string.
-4. Display whether the string is a palindrome or not.
+2. Push each character of the string into a stack.
+3. Pop characters from the stack to create the reversed string.
+4. Compare the reversed string with the original string.
+5. Display whether the string is a palindrome or not.
 
 Concepts Used
-- For loop
-- String manipulation
-- String concatenation
-- equals() method for comparison
+Stack
+Push Operation
+Pop Operation
+String comparison
 
 Data Structure Used
-String
+Stack
 
 Example
 
