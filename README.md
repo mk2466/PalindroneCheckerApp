@@ -1,34 +1,30 @@
-# Palindrome Checker App - UC10
+# Palindrome Checker App - UC11
 
 ## Description
-UC10 implements a case-insensitive and space-ignored palindrome checker using a console-based Java application.
+UC11 implements an object-oriented palindrome service by encapsulating palindrome logic inside a dedicated class.
 
 ## Objective
-To check whether a string is a palindrome while ignoring spaces and character case differences.
+To demonstrate encapsulation and single responsibility principle by separating palindrome logic from application logic.
 
 ## Features
-- Ignores spaces
+- Encapsulated palindrome logic
 - Case-insensitive comparison
-- Uses string preprocessing
-- Uses two-pointer logic
+- Ignores non-alphanumeric characters
 - Console-based execution
 
-## Concepts Used
-- String normalization
-- Regular expressions
-- Two-pointer technique
-- String manipulation
+## OOP Concepts Used
+- Encapsulation
+- Single Responsibility Principle
+- Class and Object design
 
-## How It Works
-1. User enters a string.
-2. Spaces are removed using regular expressions.
-3. String is converted to lowercase.
-4. Characters are compared from both ends.
-5. Result is printed to console.
+## Structure
+1. PalindromeChecker class handles palindrome validation.
+2. PalindromeApp class handles user interaction.
+3. checkPalindrome() method exposes validation service.
 
 ## How to Run
 1. Compile:
-   javac PalindromeCheckerUC10.java
+   javac PalindromeApp.java
 
 2. Run:
-   java PalindromeCheckerUC10
+   java PalindromeApp
