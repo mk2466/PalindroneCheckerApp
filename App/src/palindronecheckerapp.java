@@ -1,25 +1,33 @@
 import java.util.Scanner;
 import java.util.Stack;
+import java.util.Queue;
+import java.util.LinkedList;
 
-public class StackPalindromeCheck {
+public class QueueStackPalindromeCheck {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a string: ");
         String input = sc.nextLine();
 
         Stack<Character> stack = new Stack<>();
+        Queue<Character> queue = new LinkedList<>();
 
         for (int i = 0; i < input.length(); i++) {
-            stack.push(input.charAt(i));
+            char ch = input.charAt(i);
+            stack.push(ch);
+            queue.add(ch);
         }
 
-        String reversed = "";
+        boolean palindrome = true;
 
         while (!stack.isEmpty()) {
-            reversed = reversed + stack.pop();
+            if (stack.pop() != queue.remove()) {
+                palindrome = false;
+                break;
+            }
         }
 
-        if (input.equals(reversed)) {
+        if (palindrome) {
             System.out.println("The string is a palindrome");
         } else {
             System.out.println("The string is not a palindrome");

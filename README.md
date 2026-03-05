@@ -1,27 +1,29 @@
 Palindrome Checker App
 
-UC5: Stack-Based Palindrome Checker
+UC6: Queue + Stack Based Palindrome Check
 
 Description
-This Java console application checks whether a given string is a palindrome using a stack. The stack stores characters of the string and reverses their order using push and pop operations.
+This Java console application checks whether a given string is a palindrome using both Queue and Stack data structures.
 
 Goal
-To verify whether a string is a palindrome using stack operations.
+To demonstrate FIFO and LIFO behavior using Queue and Stack for palindrome validation.
 
 Process
 1. Take a string input from the user.
-2. Push each character of the string into a stack.
-3. Pop characters from the stack to create the reversed string.
-4. Compare the reversed string with the original string.
-5. Display whether the string is a palindrome or not.
+2. Insert characters into a queue.
+3. Push characters into a stack.
+4. Remove characters from the queue and pop characters from the stack.
+5. Compare both values to determine if the string is a palindrome.
 
 Concepts Used
+Queue
 Stack
-Push Operation
-Pop Operation
-String comparison
+FIFO Principle
+LIFO Principle
+Logical comparison
 
-Data Structure Used
+Data Structures Used
+Queue
 Stack
 
 Example
