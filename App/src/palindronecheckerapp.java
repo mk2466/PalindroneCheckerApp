@@ -1,19 +1,66 @@
-import java.util.ArrayDeque;
-import java.util.Deque;
 import java.util.Scanner;
 
-public class PalindromeCheckerApp {
-    public static boolean isPalindrome(String input) {
-        Deque<Character> deque = new ArrayDeque<>();
+class Node {
+    char data;
+    Node next;
+
+    Node(char data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+public class LinkedListPalindromeChecker {
+
+    public static Node createList(String input) {
+        Node head = null;
+        Node tail = null;
 
         for (char c : input.toCharArray()) {
-            deque.addLast(c);
+            Node newNode = new Node(c);
+            if (head == null) {
+                head = newNode;
+                tail = newNode;
+            } else {
+                tail.next = newNode;
+                tail = newNode;
+            }
+        }
+        return head;
+    }
+
+    public static boolean isPalindrome(Node head) {
+        if (head == null || head.next == null) {
+            return true;
         }
 
-        while (deque.size() > 1) {
-            if (!deque.removeFirst().equals(deque.removeLast())) {
+        Node slow = head;
+        Node fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        Node prev = null;
+        Node current = slow;
+
+        while (current != null) {
+            Node next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+
+        Node firstHalf = head;
+        Node secondHalf = prev;
+
+        while (secondHalf != null) {
+            if (firstHalf.data != secondHalf.data) {
                 return false;
             }
+            firstHalf = firstHalf.next;
+            secondHalf = secondHalf.next;
         }
 
         return true;
@@ -24,7 +71,9 @@ public class PalindromeCheckerApp {
         System.out.print("Enter a string: ");
         String input = scanner.nextLine();
 
-        boolean result = isPalindrome(input);
+        Node head = createList(input);
+
+        boolean result = isPalindrome(head);
 
         if (result) {
             System.out.println("The string is a palindrome.");

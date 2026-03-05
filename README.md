@@ -1,43 +1,42 @@
 # PalindromeChecker App
 
 ## Overview
-PalindromeChecker App is a console-based Java application that checks whether a given string is a palindrome using a Deque data structure.
+PalindromeChecker App is a console-based Java application that determines whether a given string is a palindrome using a singly linked list.
 
 ## Objective
-The objective of this application is to validate if a string reads the same forward and backward while demonstrating the use of a double-ended queue.
+The objective is to check palindrome strings while demonstrating linked list operations and pointer techniques.
 
 ## Use Case
-UC7: Deque-Based Optimized Palindrome Checker
+UC8: Linked List Based Palindrome Checker
 
 ## Goal
-Use a Deque to compare characters from the front and rear of the string.
+Check if a string is a palindrome using a singly linked list.
 
 ## Flow
-1. Accept a string input from the user.
-2. Insert each character into a Deque.
-3. Remove the first and last elements from the Deque.
-4. Compare the characters.
-5. Continue until the Deque is empty or a mismatch occurs.
+1. Convert the input string into a linked list.
+2. Find the middle of the linked list using fast and slow pointers.
+3. Reverse the second half of the linked list.
+4. Compare the first half with the reversed second half.
 
 ## Data Structure
-Deque (Double Ended Queue)
+Singly Linked List
 
 ## Technologies
 Java  
 Console Application  
-Deque (ArrayDeque)
+Linked List
 
 ## How to Run
-1. Save the file as PalindromeCheckerApp.java
+1. Save the file as LinkedListPalindromeChecker.java
 2. Compile the program:
-   javac PalindromeCheckerApp.java
+   javac LinkedListPalindromeChecker.java
 3. Run the program:
-   java PalindromeCheckerApp
+   java LinkedListPalindromeChecker
 
 ## Example
 
 Input:
-madam
+level
 
 Output:
 The string is a palindrome.
