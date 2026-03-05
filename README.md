@@ -1,41 +1,43 @@
-Palindrome Checker App
+# PalindromeChecker App
 
-UC6: Queue + Stack Based Palindrome Check
+## Overview
+PalindromeChecker App is a console-based Java application that checks whether a given string is a palindrome using a Deque data structure.
 
-Description
-This Java console application checks whether a given string is a palindrome using both Queue and Stack data structures.
+## Objective
+The objective of this application is to validate if a string reads the same forward and backward while demonstrating the use of a double-ended queue.
 
-Goal
-To demonstrate FIFO and LIFO behavior using Queue and Stack for palindrome validation.
+## Use Case
+UC7: Deque-Based Optimized Palindrome Checker
 
-Process
-1. Take a string input from the user.
-2. Insert characters into a queue.
-3. Push characters into a stack.
-4. Remove characters from the queue and pop characters from the stack.
-5. Compare both values to determine if the string is a palindrome.
+## Goal
+Use a Deque to compare characters from the front and rear of the string.
 
-Concepts Used
-Queue
-Stack
-FIFO Principle
-LIFO Principle
-Logical comparison
+## Flow
+1. Accept a string input from the user.
+2. Insert each character into a Deque.
+3. Remove the first and last elements from the Deque.
+4. Compare the characters.
+5. Continue until the Deque is empty or a mismatch occurs.
 
-Data Structures Used
-Queue
-Stack
+## Data Structure
+Deque (Double Ended Queue)
 
-Example
+## Technologies
+Java  
+Console Application  
+Deque (ArrayDeque)
 
-Input
+## How to Run
+1. Save the file as PalindromeCheckerApp.java
+2. Compile the program:
+   javac PalindromeCheckerApp.java
+3. Run the program:
+   java PalindromeCheckerApp
+
+## Example
+
+Input:
 madam
 
-Output
-The string is a palindrome
-
-Input
-hello
-
-Output
-The string is not a palindrome
+Output:
+The string is a palindrome.
